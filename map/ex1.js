@@ -21,7 +21,12 @@ En sortie: [
 
  */
 
+ const strings = ['Chicken', 'Bacon', 'Tofu', 'Mayonnaise'];
+
 function getStringsLength(strings) {
+  return strings.map(function(string){
+    return `${string} contains ${string.length} characters`;
+  });
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
