@@ -50,7 +50,41 @@ Sortie attendue:
 
 */
 
+const campuses =[
+  { city: 'Bordeaux',
+    curriculums: [
+      { name: 'PHP/Symfony', numStudents: 12 },
+      { name: 'JS/React', numStudents: 29 }
+    ]
+  },
+  {
+    city: 'La Loupe',
+    curriculums: [
+      { name: 'JS/Angular', numStudents: 32 }
+    ]
+  },
+  {
+    city: 'Lille',
+    curriculums: [
+      { name: 'PHP/Symfony', numStudents: 12 },
+      { name: 'JS/React', numStudents: 10 }
+    ]
+  },
+  {
+    city: 'Marseille',
+    curriculums: [
+      { name: 'JS/React', numStudents: 16 }
+    ]
+  }
+];
+
+const curriculumName = 'PHP/Symfony';
+
 function getStudentsPerCurriculum(campuses, curriculumName) {
+  return campuses.filter(campus=>campus.curriculums[0].name === curriculumName).map(campus=> campus.city + ' : ' + campus.curriculums[1].numStudents);
 }
+
+
+console.log(getStudentsPerCurriculum(campuses, curriculumName));
 
 module.exports = getStudentsPerCurriculum;
