@@ -85,6 +85,5 @@ function getStudentsPerCurriculum(campuses, curriculumName) {
 }
 
 
-console.log(getStudentsPerCurriculum(campuses, curriculumName));
 
 module.exports = getStudentsPerCurriculum;
